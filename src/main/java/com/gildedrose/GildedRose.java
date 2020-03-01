@@ -14,7 +14,7 @@ class GildedRose {
             } else if (items[i].name.equals("Aged Brie")) {
                 new AgedBrieUpdater().update(items[i]);
             } else if(items[i].name.equals("Backstage passes to a TAFKAL80ETC concert")){
-                updateBackstageQuality(items[i]);
+                new BackstageUpdater().update(items[i]);
             } else {
                 updateSulfurasQuality(items[i]);
             }
@@ -22,28 +22,4 @@ class GildedRose {
     }
 
     private void updateSulfurasQuality(Item item){}
-
-    private void updateBackstageQuality(Item item) {
-        if (item.quality < 50) {
-            item.quality++;
-        }
-
-        if (item.sellIn < 11) {
-            if (item.quality < 50) {
-                item.quality = item.quality + 1;
-            }
-        }
-
-        if (item.sellIn < 6) {
-            if (item.quality < 50) {
-                item.quality = item.quality + 1;
-            }
-        }
-
-        item.sellIn--;
-
-        if (item.sellIn < 0) {
-            item.quality = 0;
-        }
-    }
 }
