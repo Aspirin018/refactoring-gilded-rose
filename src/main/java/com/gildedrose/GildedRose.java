@@ -21,7 +21,7 @@ class GildedRose {
 
     public void updateItem() {
         Arrays.stream(items).forEach(item -> {
-            if (specialUpdateMapper.keySet().contains(item.name)) {
+            if (specialUpdateMapper.containsKey(item.name)) {
                 specialUpdateMapper.get(item.name).update(item);
             } else {
                 new DefaultItemUpdater().update(item);
