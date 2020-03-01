@@ -1,13 +1,16 @@
 package com.gildedrose;
 
 public class AgedBrieUpdater implements ItemUpdater {
+
+    private static final int CRITICAL_QUALITY = 50;
+    private static final int CRITICAL_SELL_IN = 0;
     @Override
     public void update(Item item) {
-        if (item.quality < 50) {
+        item.sellIn--;
+        if (item.quality < CRITICAL_QUALITY) {
             item.quality++;
         }
-        item.sellIn--;
-        if (item.sellIn < 0 && item.quality < 50) {
+        if (item.sellIn < CRITICAL_SELL_IN && item.quality < CRITICAL_QUALITY) {
             item.quality++;
         }
     }
