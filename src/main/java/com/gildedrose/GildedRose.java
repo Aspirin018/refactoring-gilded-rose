@@ -19,7 +19,7 @@ class GildedRose {
         specialUpdateMapper.put("Sulfuras, Hand of Ragnaros", new SulfurasUpdater());
     }
 
-    public void update_quality() {
+    public void updateItem() {
         Arrays.stream(items).forEach(item -> {
             if (specialUpdateMapper.keySet().contains(item.name)) {
                 specialUpdateMapper.get(item.name).update(item);
