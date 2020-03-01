@@ -115,4 +115,13 @@ public class GildedRoseTest {
         assertThat(app.items[0].quality, is(5));
         assertThat(app.items[0].sell_in, is(0));
     }
+
+    @Test
+    public void should_not_be_changed_when_is_Sulfuras_and_sellin_less_than_zero() {
+        Item[] items = new Item[] { new Item("Sulfuras, Hand of Ragnaros", -1, 5) };
+        GildedRose app = new GildedRose(items);
+        app.update_quality();
+        assertThat(app.items[0].quality, is(5));
+        assertThat(app.items[0].sell_in, is(-1));
+    }
 }
