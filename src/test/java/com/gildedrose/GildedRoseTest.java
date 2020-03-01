@@ -14,7 +14,7 @@ public class GildedRoseTest {
         GildedRose app = new GildedRose(items);
         app.update_quality();
         assertThat(app.items[0].quality, is(4));
-        assertThat(app.items[0].sell_in, is(0));
+        assertThat(app.items[0].sellIn, is(0));
     }
 
     @Test
@@ -23,7 +23,7 @@ public class GildedRoseTest {
         GildedRose app = new GildedRose(items);
         app.update_quality();
         assertThat(app.items[0].quality, is(0));
-        assertThat(app.items[0].sell_in, is(0));
+        assertThat(app.items[0].sellIn, is(0));
     }
 
     @Test
@@ -32,7 +32,7 @@ public class GildedRoseTest {
         GildedRose app = new GildedRose(items);
         app.update_quality();
         assertThat(app.items[0].quality, is(3));
-        assertThat(app.items[0].sell_in, is(-1));
+        assertThat(app.items[0].sellIn, is(-1));
     }
 
     @Test
@@ -41,7 +41,7 @@ public class GildedRoseTest {
         GildedRose app = new GildedRose(items);
         app.update_quality();
         assertThat(app.items[0].quality, is(0));
-        assertThat(app.items[0].sell_in, is(-1));
+        assertThat(app.items[0].sellIn, is(-1));
     }
 
     @Test
@@ -50,7 +50,7 @@ public class GildedRoseTest {
         GildedRose app = new GildedRose(items);
         app.update_quality();
         assertThat(app.items[0].quality, is(6));
-        assertThat(app.items[0].sell_in, is(0));
+        assertThat(app.items[0].sellIn, is(0));
     }
 
     @Test
@@ -59,7 +59,7 @@ public class GildedRoseTest {
         GildedRose app = new GildedRose(items);
         app.update_quality();
         assertThat(app.items[0].quality, is(51));
-        assertThat(app.items[0].sell_in, is(0));
+        assertThat(app.items[0].sellIn, is(0));
     }
 
     @Test
@@ -68,7 +68,7 @@ public class GildedRoseTest {
         GildedRose app = new GildedRose(items);
         app.update_quality();
         assertThat(app.items[0].quality, is(7));
-        assertThat(app.items[0].sell_in, is(-1));
+        assertThat(app.items[0].sellIn, is(-1));
     }
 
     @Test
@@ -77,7 +77,7 @@ public class GildedRoseTest {
         GildedRose app = new GildedRose(items);
         app.update_quality();
         assertThat(app.items[0].quality, is(8));
-        assertThat(app.items[0].sell_in, is(0));
+        assertThat(app.items[0].sellIn, is(0));
     }
 
     @Test
@@ -86,7 +86,7 @@ public class GildedRoseTest {
         GildedRose app = new GildedRose(items);
         app.update_quality();
         assertThat(app.items[0].quality, is(7));
-        assertThat(app.items[0].sell_in, is(6));
+        assertThat(app.items[0].sellIn, is(6));
     }
 
     @Test
@@ -95,7 +95,7 @@ public class GildedRoseTest {
         GildedRose app = new GildedRose(items);
         app.update_quality();
         assertThat(app.items[0].quality, is(6));
-        assertThat(app.items[0].sell_in, is(11));
+        assertThat(app.items[0].sellIn, is(11));
     }
 
     @Test
@@ -104,7 +104,7 @@ public class GildedRoseTest {
         GildedRose app = new GildedRose(items);
         app.update_quality();
         assertThat(app.items[0].quality, is(0));
-        assertThat(app.items[0].sell_in, is(-1));
+        assertThat(app.items[0].sellIn, is(-1));
     }
 
     @Test
@@ -113,7 +113,7 @@ public class GildedRoseTest {
         GildedRose app = new GildedRose(items);
         app.update_quality();
         assertThat(app.items[0].quality, is(5));
-        assertThat(app.items[0].sell_in, is(0));
+        assertThat(app.items[0].sellIn, is(0));
     }
 
     @Test
@@ -122,6 +122,6 @@ public class GildedRoseTest {
         GildedRose app = new GildedRose(items);
         app.update_quality();
         assertThat(app.items[0].quality, is(5));
-        assertThat(app.items[0].sell_in, is(-1));
+        assertThat(app.items[0].sellIn, is(-1));
     }
 }
