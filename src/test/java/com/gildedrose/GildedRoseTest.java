@@ -79,4 +79,13 @@ public class GildedRoseTest {
         assertThat(app.items[0].quality, is(8));
         assertThat(app.items[0].sell_in, is(0));
     }
+
+    @Test
+    public void should_be_added_by_2_when_is_Backstage_and_quality_less_than_50_and_sellin_less_than_11() {
+        Item[] items = new Item[] { new Item("Backstage passes to a TAFKAL80ETC concert", 7, 5) };
+        GildedRose app = new GildedRose(items);
+        app.update_quality();
+        assertThat(app.items[0].quality, is(7));
+        assertThat(app.items[0].sell_in, is(6));
+    }
 }
