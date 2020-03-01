@@ -52,4 +52,13 @@ public class GildedRoseTest {
         assertThat(app.items[0].quality, is(6));
         assertThat(app.items[0].sell_in, is(0));
     }
+
+    @Test
+    public void should_not_be_reduced_when_is_Aged_Brie_and_quality_not_less_than_50() {
+        Item[] items = new Item[] { new Item("Aged Brie", 1, 51) };
+        GildedRose app = new GildedRose(items);
+        app.update_quality();
+        assertThat(app.items[0].quality, is(51));
+        assertThat(app.items[0].sell_in, is(0));
+    }
 }
