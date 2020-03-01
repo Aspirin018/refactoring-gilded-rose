@@ -11,7 +11,7 @@ class GildedRose {
 
     public void update_quality() {
         for (int i = 0; i < items.length; i++) {
-            if (Arrays.asList("Aged Brie", "Backstage passes to a TAFKAL80ETC concert", "Sulfuras, Hand of Ragnaros").contains(items[i])) {
+            if (!items[i].name.equals("Aged Brie") && !items[i].name.equals("Backstage passes to a TAFKAL80ETC concert") && !items[i].name.equals("Sulfuras, Hand of Ragnaros")) {
                 updateDefaultItemQuality(items[i]);
             } else {
                 if (items[i].name.equals("Aged Brie") || items[i].name.equals("Backstage passes to a TAFKAL80ETC concert")) {
