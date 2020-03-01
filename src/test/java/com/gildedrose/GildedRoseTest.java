@@ -61,4 +61,13 @@ public class GildedRoseTest {
         assertThat(app.items[0].quality, is(51));
         assertThat(app.items[0].sell_in, is(0));
     }
+
+    @Test
+    public void should_be_added_by_2_when_is_Aged_Brie_and_quality_less_than_50_and_sellin_less_than_zero() {
+        Item[] items = new Item[] { new Item("Aged Brie", 0, 5) };
+        GildedRose app = new GildedRose(items);
+        app.update_quality();
+        assertThat(app.items[0].quality, is(7));
+        assertThat(app.items[0].sell_in, is(-1));
+    }
 }
