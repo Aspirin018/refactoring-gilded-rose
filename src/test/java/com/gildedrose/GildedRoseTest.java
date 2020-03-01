@@ -16,4 +16,13 @@ public class GildedRoseTest {
         assertThat(app.items[0].quality, is(4));
         assertThat(app.items[0].sell_in, is(0));
     }
+
+    @Test
+    public void should_not_be_reduced_when_is_not_special_item_and_quality_not_more_than_zero() {
+        Item[] items = new Item[] { new Item("milk", 1, 0) };
+        GildedRose app = new GildedRose(items);
+        app.update_quality();
+        assertThat(app.items[0].quality, is(0));
+        assertThat(app.items[0].sell_in, is(0));
+    }
 }
