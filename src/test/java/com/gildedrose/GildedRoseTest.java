@@ -18,7 +18,7 @@ public class GildedRoseTest {
     }
 
     @Test
-    public void should_not_be_reduced_when_is_not_special_item_and_quality_not_more_than_zero() {
+    public void should_not_change_when_is_not_special_item_and_quality_not_more_than_zero() {
         Item[] items = new Item[] { new Item("milk", 1, 0) };
         GildedRose app = new GildedRose(items);
         app.update_quality();
@@ -45,7 +45,7 @@ public class GildedRoseTest {
     }
 
     @Test
-    public void should_be_reduced_by_1_when_is_Aged_Brie_and_quality_less_than_50() {
+    public void should_be_added_by_1_when_is_Aged_Brie_and_quality_less_than_50() {
         Item[] items = new Item[] { new Item("Aged Brie", 1, 5) };
         GildedRose app = new GildedRose(items);
         app.update_quality();
@@ -54,7 +54,7 @@ public class GildedRoseTest {
     }
 
     @Test
-    public void should_not_be_reduced_when_is_Aged_Brie_and_quality_not_less_than_50() {
+    public void should_not_change_when_is_Aged_Brie_and_quality_not_less_than_50() {
         Item[] items = new Item[] { new Item("Aged Brie", 1, 51) };
         GildedRose app = new GildedRose(items);
         app.update_quality();
