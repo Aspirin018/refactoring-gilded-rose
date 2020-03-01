@@ -16,10 +16,8 @@ class GildedRose {
             } else if(items[i].name.equals("Backstage passes to a TAFKAL80ETC concert")){
                 new BackstageUpdater().update(items[i]);
             } else {
-                updateSulfurasQuality(items[i]);
+                new SulfurasUpdater().update(items[i]);
             }
         }
     }
-
-    private void updateSulfurasQuality(Item item){}
 }
